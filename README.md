@@ -27,7 +27,7 @@ from request_lib import get_credential # alternative
 ```
 
 **How to use it?**  
-1. Modify the "CREDENTIAL" file with your access token and ad id after  
+1. Modify the ```CREDENTIAL``` file with your access token and ad id after  
 you have followed the above pdf instruction to set up an Facebook app  
 and created a Facebook ad.
 
