@@ -1,5 +1,6 @@
 # fb-request-lib
-A friendly request library for Facebook API query in python2
+A friendly request library for Facebook API query  
+Python2 and Python3 are supported!  
 
 ## Section 0: What is this library for?
 This Facebook Marketing Api request library is designed for making  
@@ -43,8 +44,9 @@ def build_id_dictionary(category_filename):
 **Output:** a python dictionary with key as id number, and value as category type.  
 
 Input requirement:  
-The input .csv file must have its 1st column to a column of id number and  
-the 2nd column to be category type for 1st column's id number.  
+The input .csv file must have its 1st column to be a column of id number and  
+the 2nd column to be the category type for 1st column's id number.  
+
 This function will open the file contains all the query categories. Then, it  
 will read the file line by line and build a python dictionary with key as id  
 number and value as category type. At the end, a dictionary contains all the  
@@ -57,7 +59,13 @@ def build_country_dictionary(country_filname):
 **Input:** a filename for a .csv file contains all the query countries  
 **Output:** a python dictionary with key as full country name, and value as 2 letter coding for country.  
 
-TODO
+Input requirement:  
+The input .csv file must have its 1st column to be a column of country names 
+and the 2nd column to be 2 letter country name for the 1st column.  
+
+This function open the file contains the country names and read each line to  
+build a python dictionary with key as full country name, and value as 2 letter  
+coding for country. At the end, the function will return the dictionary.  
 
 ```python
 # build params per job
@@ -66,7 +74,11 @@ def build_params(country, group_id, id_type):
 **Input:** 2 letter country code, category id number, category type  
 **Output:** a list of python dictionary of parameters for API request  
 
-TODO
+In this function, it will build a list of 12 parameters for API request.  
+Why 12 parameters? It is because there are 2 genders and each gender can have  
+6 age groups. Hence, 2 x 6 = 12 paramters. For each gender, and for each  
+gender's age group, it will create a parameter and append it to the list for  
+function output. At the end, the list of parameters will be returned.  
 
 ```python
 # build list of url from given params
@@ -75,7 +87,9 @@ def build_url(params, access_token, ad_id):
 **Input:** request paramters list, your access token, your ad id  
 **Output:** a list of constructed URL for making API call   
 
-TODO
+For each request parameters of the "params" input, it will create a specific  
+url combined with "access_token" and "ad_id". A list of url will be returned  
+from this function for the "api_request()" function to make API calls.  
 
 ```python
 # check response limit
@@ -84,8 +98,15 @@ def check_request_limit(response):
 **Input:** API call response returned after making request  
 **Output:** a boolean value to indicate whether limit is reached  
 
-TODO
-
+For each Facebook Marketing API call, the response header of the API request  
+contains a field called "x-ad-account-usage" and it has a field called  
+"acc_id_util_pct". "acc_id_util_pct" contains the data indicate the current  
+rate limit of your API call. Higher the number, lower the number of request  
+you can make in the future. This function set 50% as default. You can change  
+the return statement to adjust the threshold of checking rate limit.  
+This function should return **True** when you have not exceeded rate limit 50%.   
+Otherwise, it will return **False** to indicate you have exceeded 50% rate limit.   
+ 
 ```python
 # make api request with given built urls
 def api_request(url_list, url_start, country, group_id):
@@ -100,8 +121,28 @@ def api_request(url_list, url_start, country, group_id):
 2. last_url_index: 11 if all 12 requests are made successfully; otherwise,  
                    it will be the last request didn't exceed request limit  
 3. reach_limit: a boolean indicator for your request has exceeded limit or not.  
+For each url from the input "url_list", this function will make GET request.  
+Using "requests" library, the function call "requests.get()" will actually  
+make get request and the return will be JSON after calling "json.loads()".  
+Then, each response is formatted in a nicer way to output and appended to a  
+list of outputs.
 
-TODO 
+For each request, "last_url_index" will store the most recently index of the  
+requested url from the "url_list" to insure the position is noted and returned.  
+Why returning last_url_index? It is because we want to have the index of url  
+from the url_list when you reached the limit. The last_url_index will be stored  
+in the checkpoint file for insurance purpose.  
+
+For each request, "check_request_limit()" is also called with API request's  
+reponse passed into as the argument. If limit reached, it will return false,  
+"reach_limit" variable will be set to True and the request will be stopped.  
+
+At the end of the function call, it will return the list of formatted outputs,  
+a variable called "last_url_index", which is usually equal to 11 since all the  
+urls from the "url_list" are used to request data from Facebook. However, it  
+can also be any number from 0-11 since your request limit might reach before  
+you can finish making all the request with the "url_list". And then, it will  
+return the boolean indicator to see if you have reached the limit.    
 
 ```python
 # get checking point after terminating request
@@ -113,7 +154,12 @@ def starting_points(checkpoint_fname):
 2. country_start: request start position for the country list  
 3. url_stary: request start position for the url list  
 
-TODO
+This function should be called before calling "build_params" and "build_urls"  
+since it reads the checkpoint file you provided to start the right place after  
+your previous request since rate limit reached. If you have not made any request  
+(first time making request), the category_start, country_start, and url_start will  
+be set to 0 to indicate you are starting at the begining of all the requests.  
+At the end, the starting indexes of category, country, and url will be returned.  
 
 ```python
 # write api response to file
@@ -122,4 +168,9 @@ def write_reseponse(filename, api_responses):
 **Input:** filename for output, your api responses from api request  
 **Output:** (appending new responses to the output file)  
 
-TODO
+After you made requests, this function will be used to store your "api_responses"  
+to a file designated with the argument called "filename". If the output file  
+you specified doesn't exist, you will first create that file and write the header  
+for the data you are about to write to. If the output file already exists, it  
+will write in append mode to append data to it. And then, it will write request   
+results from the "api_responses" line by line to the output file. 
