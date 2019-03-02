@@ -7,7 +7,7 @@ This Facebook Marketing Api request library is designed for making
 GET API call easier to **Facebook Marketing API V3.2**.  
 
 **How to obtain Facebook Marketing API Credential?**  
-See the pdf instruction in this repository!  
+[See the pdf instruction in this repository!](https://github.com/KangboLu/request-lib/blob/master/FB%20Marketing%20API%20Setup.pdf)  
 
 **How to use it?**  
 0. Modify the "CREDENTIAL" file with your access token and ad id.  
