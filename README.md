@@ -1,4 +1,4 @@
-# request-lib for Facebook Marketing API
+# request-lib v1.0
 A friendly request library for Facebook API query  
 **Both Python2 and Python3 are supported!**  
 
