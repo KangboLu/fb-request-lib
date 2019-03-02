@@ -1,4 +1,4 @@
-# request-lib v1.0
+# request-lib
 A friendly request library for Facebook API query  
 **Both Python2 and Python3 are supported!**  
 
@@ -9,13 +9,7 @@ GET API call easier to **Facebook Marketing API V3.2**.
 **How to obtain Facebook Marketing API Credential?**  
 [See the pdf instruction in this repository!](https://github.com/KangboLu/request-lib/blob/master/FB%20Marketing%20API%20Setup.pdf)  
 
-**How to use it?**  
-0. Modify the "CREDENTIAL" file with your access token and ad id.  
-
-1. Install ```requests``` libaray first!  
-```pip install requests```
-
-2. Import the request_lib library
+**How to Import the request_lib library?**
 ```python
 # import the whole library
 import request_lib
@@ -28,10 +22,23 @@ import request_lib.get_credential as get_credential
 from request_lib import get_credential # alternative
 ```
 
-3. Run the ```get_audience_data.py``` file to collect data
+**How to use it?**  
+1. Modify the "CREDENTIAL" file with your access token and ad id after  
+you have followed the above pdf instruction to set up an Facebook app  
+and created a Facebook ad.
+
+2. Install ```requests``` libaray first!  
+```pip install requests```  
+
+3. Run the ```get_audience_data.py``` file to collect data. The code  
+is clearly commented. Read the comment first to see how the data  
+collect process is conducted. A file called "api_responses.csv" will  
+be created for your output and another file called "checkpoint.txt"  
+will be created to insure smooth data collection process.  
 
 4. Run ```transform.py``` after you have collected all your data  
-and having a file called "api_responses.csv".
+and having a file called "api_responses.csv". It create a more readable  
+file called "dataset.csv" for you.  
 
 ## Section 1: Implementations
 **Library used:** csv, requests, urllib, json, time, os  
