@@ -8,7 +8,11 @@ GET API call easier to **Facebook Marketing API V3.2** to study
 the digital data of Latin America Facebook users.  
 (32 countires are studied since Facebook does not have Cuba's data) 
 
-**How to use it?**
+**How to use it?**  
+1. Install ```requests``` libaray first!  
+```pip install requests```
+
+2. Import the request_lib library
 ```python
 # import the whole library
 import request_lib
@@ -22,7 +26,8 @@ from request_lib import get_credential # alternative
 ```
 
 ## Section 1: Implementations
-**Library used:** csv, requests, urllib, json, time, os
+**Library used:** csv, requests, urllib, json, time, os  
+Besides **requests**, all the library are python2 or python3 built-in packages.  
 
 ```python
 # get credenial stored in CREDENTIAL file
