@@ -4,12 +4,14 @@ A friendly request library for Facebook API query
 
 ## Section 0: What is this library for?
 This Facebook Marketing Api request library is designed for making  
-GET API call easier to **Facebook Marketing API V3.2** to study the  
-digital data of Latin America Facebook users.  
-(32 countires are studied since Facebook does not have Cuba's data) 
+GET API call easier to **Facebook Marketing API V3.2**.  
+
+**How to obtain Facebook Marketing API Credential?**  
+See the pdf instruction in this repository!  
 
 **How to use it?**  
 0. Modify the "CREDENTIAL" file with your access token and ad id.  
+
 1. Install ```requests``` libaray first!  
 ```pip install requests```
 
