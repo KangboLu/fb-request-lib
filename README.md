@@ -25,6 +25,8 @@ import request_lib.get_credential as get_credential
 from request_lib import get_credential # alternative
 ```
 
+3. See the ```get_audience_data.py``` file for case study!
+
 ## Section 1: Implementations
 **Library used:** csv, requests, urllib, json, time, os  
 Besides **requests**, all the library are python2 or python3 built-in packages.  
@@ -62,10 +64,11 @@ category info will be returned from this function.
 def build_country_dictionary(country_filname):
 ```
 **Input:** a filename for a .csv file contains all the query countries  
-**Output:** a python dictionary with key as full country name, and value as 2 letter coding for country.  
+**Output:** a python dictionary with key as full country name, and value  
+as 2 letter coding for country.  
 
 Input requirement:  
-The input .csv file must have its 1st column to be a column of country names 
+The input .csv file must have its 1st column to be a column of country names  
 and the 2nd column to be 2 letter country name for the 1st column.  
 
 This function open the file contains the country names and read each line to  
