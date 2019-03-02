@@ -2,6 +2,10 @@
 A friendly request library for Facebook API query  
 **Both Python2 and Python3 are supported!**  
 
+If you encounter problem, please describe problem with screenshot  
+in the "Issues" section of the repository. I will try to answer and  
+solve it with you as possible as I can.  
+
 ## Section 0: What is this library for?
 This Facebook Marketing Api request library is designed for making  
 GET API call easier to **Facebook Marketing API V3.2**.  
