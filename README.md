@@ -115,7 +115,8 @@ def api_request(url_list, url_start, country, group_id):
 1. a list of url  
 2. start position of url request in the url list  
 3. 2 letter country code  
-4. category id number  
+4. category id number 
+
 **Output:**
 1. outcome: a list of processed API call response with details  
 2. last_url_index: 11 if all 12 requests are made successfully; otherwise,  
