@@ -1,71 +1,71 @@
-id,id types,name
-6017253486583,behaviors,Facebook access (network type): 2G
-6017253511583,behaviors,Facebook access (network type): 3G
-6017253531383,behaviors,Facebook access (network type): 4G
-6015235495383,behaviors,Facebook access (network type): WiFi 
-6004854404172,behaviors,Facebook access: older devices and OS
+id,id_types,name
+6017253486583,behaviors,Facebook_access_(network_type):_2G
+6017253511583,behaviors,Facebook_access_(network_type):_3G
+6017253531383,behaviors,Facebook_access_(network_type):_4G
+6015235495383,behaviors,Facebook_access_(network_type):_WiFi_
+6004854404172,behaviors,Facebook_access:_older_devices_and_OS
 6003479582947,interests,business owners
-6008888954983,industries,Administrative Services
-6012903126783,industries,Architecture and Engineering
-6012901802383,industries,"Arts, Entertainment, Sports and Media"
-6009003307783,industries,Business and Finance
-6012903168383,industries,Community and Social Services
-6012903167783,industries,Computation and Mathematics
-6012903128783,industries,Construction and Extraction
-6008888998983,industries,Education and Libraries
-6012903299983,industries,"Farming, Fishing and Forestry"
-6012903127583,industries,Food and Restaurants
-6019621029983,industries,Government Employees (Global)
-6012903159383,industries,Healthcare and Medical Services
-6008888961983,industries,IT and Technical Services
-6012903160983,industries,Installation and Repair Services
-6008888972183,industries,Legal Services
-6012903167183,industries,"Life, Physical and Social Sciences"
+6008888954983,industries,Administrative_Services
+6012903126783,industries,Architecture_and_Engineering
+6012901802383,industries,"Arts_Entertainment_Sports_and_Media"
+6009003307783,industries,Business_and_Finance
+6012903168383,industries,Community_and_Social_Services
+6012903167783,industries,Computation_and_Mathematics
+6012903128783,industries,Construction_and_Extraction
+6008888998983,industries,Education_and_Libraries
+6012903299983,industries,"Farming,_Fishing_and_Forestry"
+6012903127583,industries,Food_and_Restaurants
+6019621029983,industries,Government_Employees_(Global)
+6012903159383,industries,Healthcare_and_Medical_Services
+6008888961983,industries,IT_and_Technical_Services
+6012903160983,industries,Installation_and_Repair_Services
+6008888972183,industries,Legal_Services
+6012903167183,industries,"Life_Physical_and_Social_Sciences"
 6009003311983,industries,Management
-6012903320383,industries,Military (Global)
+6012903320383,industries,Military_(Global)
 6012903140583,industries,Production
-6012903299783,industries,Protective Services
+6012903299783,industries,Protective_Services
 6008888980183,industries,Sales
-6012903320983,industries,Transportation and Moving
-7,relationship_statuses,Civil Union
+6012903320983,industries,Transportation_and_Moving
+7,relationship_statuses,Civil_Union
 10,relationship_statuses,Complicated
 12,relationship_statuses,Divorced
-8,relationship_statuses,Domestic Partnership
+8,relationship_statuses,Domestic_Partnership
 4,relationship_statuses,Engaged
-2,relationship_statuses,In a relationship
+2,relationship_statuses,In_a_relationship
 3,relationship_statuses,Married
-9,relationship_statuses,Open Relationship
+9,relationship_statuses,Open_Relationship
 11,relationship_statuses,Separated
 1,relationship_statuses,Single
 6,relationship_statuses,Unspecified
 13,relationship_statuses,Widowed
-6003808923172,behaviors,Technology early adopters
-6020530269183,behaviors,Food & Restaurant page admins
+6003808923172,behaviors,Technology_early_adopters
+6020530269183,behaviors,Food_&_Restaurant_page_admins
 6003648059946,interests,Bodybuilding
 6003012185129,interests,Meditation
-6004115167424,interests,Physical exercise
-6003277229371,interests,Physical fitness
+6004115167424,interests,Physical_exercise
+6003277229371,interests,Physical_fitness
 6003397496347,interests,Running
-6003473077165,interests,Weight training
+6003473077165,interests,Weight_training
 6003306084421,interests,Yoga
-6003349175527,interests,Computer memory
-6003116038942,interests,Computer monitors
-6003142705949,interests,Computer processors
-6003151951349,interests,Computer servers
-6003115804542,interests,Desktop computers
-6003423416540,interests,Free software
-6003629266583,interests,Hard drives
-6003656296104,interests,Network storage
+6003349175527,interests,Computer_memory
+6003116038942,interests,Computer_monitors
+6003142705949,interests,Computer_processors
+6003151951349,interests,Computer_servers
+6003115804542,interests,Desktop_computers
+6003423416540,interests,Free_software
+6003629266583,interests,Hard_drives
+6003656296104,interests,Network_storage
 6005609368513,interests,Software
-6002960574320,interests,Tablet computers
-6003729124262,interests,Audio equipment
+6002960574320,interests,Tablet_computers
+6003729124262,interests,Audio_equipment
 6002998517244,interests,Camcorders
 6003325186571,interests,Cameras
-6008832464480,interests,E-book readers
-6003280676501,interests,GPS devices
-6003943667466,interests,Game consoles
-6002971085794,interests,Mobile phones
-6003381994165,interests,Portable media players
+6008832464480,interests,E-book_readers
+6003280676501,interests,GPS_devices
+6003943667466,interests,Game_consoles
+6002971085794,interests,Mobile_phones
+6003381994165,interests,Portable_media_players
 6003288647527,interests,Projectors
 6003289911338,interests,Smartphones
 6003224441249,interests,Televisions
