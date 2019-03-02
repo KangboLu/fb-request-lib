@@ -7,7 +7,7 @@ in the "Issues" section of the repository. I will try to answer and
 solve it with you as possible as I can.  
 
 ## Section 0: What is this library for?
-This Facebook Marketing Api request library is designed for making  
+This Facebook Marketing API request library is designed for making  
 GET API call easier to **Facebook Marketing API V3.2**.  
 
 **How to obtain Facebook Marketing API Credential?**  
