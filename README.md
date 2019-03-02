@@ -4,11 +4,12 @@ A friendly request library for Facebook API query
 
 ## Section 0: What is this library for?
 This Facebook Marketing Api request library is designed for making  
-GET API call easier to **Facebook Marketing API V3.2** to study  
-the digital data of Latin America Facebook users.  
+GET API call easier to **Facebook Marketing API V3.2** to study the  
+digital data of Latin America Facebook users.  
 (32 countires are studied since Facebook does not have Cuba's data) 
 
 **How to use it?**  
+0. Modify the "CREDENTIAL" file with your access token and ad id.  
 1. Install ```requests``` libaray first!  
 ```pip install requests```
 
@@ -25,7 +26,10 @@ import request_lib.get_credential as get_credential
 from request_lib import get_credential # alternative
 ```
 
-3. See the ```get_audience_data.py``` file for case study!
+3. Run the ```get_audience_data.py``` file to collect data
+
+4. Run ```transform.py``` after you have collected all your data  
+and having a file called "api_responses.csv".
 
 ## Section 1: Implementations
 **Library used:** csv, requests, urllib, json, time, os  
