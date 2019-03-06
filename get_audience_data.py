@@ -67,6 +67,7 @@ def main():
             check_point_code = str(i) + "," + str(j) + "," + str(end_position)
             last_request_location.write(check_point_code)
             last_request_location.close()
+        country_start = 0
 
 while True:
     if main() == 1:
