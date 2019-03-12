@@ -6,6 +6,18 @@ If you encounter problem, please describe problem with screenshot
 in the "Issues" section of the repository. I will try to answer and  
 solve it with you as possible as I can.  
 
+**Files in the directory**
+```
+CREDENTIAL                 # your credential is stored at here
+FB Marketing API Setup.pdf # instruction for getting your credential
+README.md                  # documentation for functions in request_lib.py
+categories.csv             # a csv file contains all the categories needed
+country_codes.csv          # a csv file contains all the countries needed
+get_audience_data.py       # a py file for making GET call to Facebook API and save responses to a file
+request_lib.py             # the library used in the "get_audience_data.py" file for making requests
+transform.py               # a py file to transform your api_responses.csv output to a more readable format
+```
+
 ## Section 0: What is this library for?
 This Facebook Marketing API request library is designed for making  
 GET API call easier to **Facebook Marketing API V3.2**.  
