@@ -40,8 +40,10 @@ def transform_output(id_dict, country_dict, output_filename):
         for line in reader:
             if first_line == False:
                 first_line = True
-                writer.writerow(line)
-                continue
+                templine = line
+                templine[5] = "group_name"
+                writer.writerow(templine)
+            	continue
             templine = line
             templine[0] = country_dict[templine[0]].replace(" ", "_")
             templine[1] = gender_dict[templine[1]]
