@@ -29,6 +29,7 @@ def build_country_dictionary_transform(country_filename):
                 dictionary[str(row[1])] = str(row[0])
     return dictionary
 
+# output the transform to dataset.csv file
 def transform_output(id_dict, country_dict, output_filename):
     gender_dict = {'1':"male", '2':"female"}
     age_groups_dict = {'1':"13-20", '2':"21-30", '3':"31-40", \
