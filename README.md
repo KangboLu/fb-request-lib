@@ -13,6 +13,7 @@ FB Marketing API Setup.pdf # instruction for getting your credential
 README.md                  # documentation for functions in request_lib.py
 categories.csv             # a csv file contains all the categories needed
 country_codes.csv          # a csv file contains all the countries needed
+generate_folder.py         # a py file creates directories to distribute smaller categories.csv to different people
 get_audience_data.py       # a py file for making GET call to Facebook API and save responses to a file
 request_lib.py             # the library used in the "get_audience_data.py" file for making requests
 transform.py               # a py file to transform your api_responses.csv output to a more readable format
