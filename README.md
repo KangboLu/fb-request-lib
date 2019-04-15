@@ -25,6 +25,7 @@ GET API call easier to **Facebook Marketing API V3.2**.
 
 **How to obtain Facebook Marketing API Credential?**  
 [See the pdf instruction in this repository!](https://github.com/KangboLu/request-lib/blob/master/FB%20Marketing%20API%20Setup.pdf)  
+Your Access Token will expire in **2-3 months** after you extended the access token. Otherwise, it will only last for **1 hour**.
 
 **How to Import the request_lib library?**
 ```python
