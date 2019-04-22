@@ -38,8 +38,6 @@ def main():
             api_responses, end_position, reach_limit = \
                 lib.api_request(url_list, url_start, COUNTRY, GROUP_ID)
             url_start = 0
-            for res in api_responses:
-                print(res)
 
             # output response to file
             output_filename = "api_responses.csv"
@@ -69,6 +67,9 @@ def main():
             last_request_location.close()
         country_start = 0
 
+# get data if all requests are not finished
+# otherwise, it will keep collect data and 
+# wait if specified limit reached
 while True:
     if main() == 1:
         break
