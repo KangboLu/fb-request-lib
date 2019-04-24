@@ -59,6 +59,8 @@ will be created to insure smooth data collection process.
 and having a file called "api_responses.csv". It create a more readable  
 file called "dataset.csv" for you.  
 
+<img src="https://github.com/KangboLu/request-lib/blob/master/general_workflow.PNG" height="70%" width="70%">
+
 ## Section 1: Implementations
 **Library used:** csv, requests, urllib, json, time, os  
 Besides **requests**, all the library are python2 or python3 built-in packages.  
