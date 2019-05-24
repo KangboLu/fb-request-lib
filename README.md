@@ -1,7 +1,13 @@
 # request-lib
 A friendly request library for using Facebook Graph API to study  
 reachable audience comprehensively.  
-**Both Python2 and Python3 are supported!**  
+**Both Python2 and Python3 are supported!**
+
+***Warning:***
+For Graph API v3.2 and older, apps follow the Application level  
+rate limiting logic and User level rate limiting until **July 30, 2019**  
+when all apps will be automatically migrated to the new Business Use  
+Case rate limiting logic. Upgrade to v3.3 now to apply this new logic.
 
 If you encounter problem, please describe problem with screenshot  
 in the "Issues" section of the repository. I will try to answer and  
