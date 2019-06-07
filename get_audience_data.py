@@ -73,5 +73,5 @@ def main():
 while True:
     if main() == 1:
         break
-    print("limit reached, sleep 200s...")
-    time.sleep(200)
+    print("limit reached, sleep 170s...")
+    time.sleep(170)
