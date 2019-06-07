@@ -66,7 +66,7 @@ def build_params(country, group_id, id_type):
 def build_url(params, access_token, ad_id):
     url_list = []
     for param in params:
-        URL = "https://graph.facebook.com/v3.2/act_" + ad_id + \
+        URL = "https://graph.facebook.com/v3.3/act_" + ad_id + \
               "/delivery_estimate?access_token=" + access_token + \
               "&optimization_goal=REACH&targeting_spec="
         URL += json.dumps(param)
@@ -111,8 +111,8 @@ def api_request(url_list, url_start, country, group_id):
                  str(group_id) 
         print(OUTPUT)
         outcome.append(OUTPUT)
-        print("sleep 1s")
-        time.sleep(1)
+        print("sleep 0.6s")
+        time.sleep(0.6)
 
         # if limit reached, return outcome and checkpoint index
         last_url_index = i
