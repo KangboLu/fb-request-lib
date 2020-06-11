@@ -74,19 +74,22 @@ def build_url(params, access_token, ad_id):
     return url_list
 
 # check response limit
-def check_request_limit(response):
-    current_rate_limit = json.loads(response.headers["x-ad-account-usage"])["acc_id_util_pct"]
+def check_request_limit(response, ad_id):
+    current_rate_limit = json.loads(response.headers["x-business-use-case-usage"])[str(ad_id)][0]["call_count"]
     print("current rate limit: " + str(current_rate_limit))
-    return current_rate_limit < 50
+    return current_rate_limit < 101
 
 # make api request with given built urls
-def api_request(url_list, url_start, country, group_id):
+def api_request(url_list, url_start, country, group_id, ad_id):
     outcome = []
     last_url_index = 0
     reach_limit = False
     for i in range(url_start, len(url_list)):
+
         # make a request with specified params
         response = requests.get(url_list[i])
+        print(response.headers)
+        print()
 
         # extracting data in json format 
         data = json.loads(response.text)
@@ -116,7 +119,7 @@ def api_request(url_list, url_start, country, group_id):
 
         # if limit reached, return outcome and checkpoint index
         last_url_index = i
-        if check_request_limit(response) == False:
+        if check_request_limit(response, ad_id) == False:
             reach_limit = True
             break
     return outcome, last_url_index, reach_limit
