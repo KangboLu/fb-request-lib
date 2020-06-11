@@ -77,7 +77,7 @@ def build_url(params, access_token, ad_id):
 def check_request_limit(response, ad_id):
     current_rate_limit = json.loads(response.headers["x-business-use-case-usage"])[str(ad_id)][0]["call_count"]
     print("current rate limit: " + str(current_rate_limit))
-    return current_rate_limit < 101
+    return current_rate_limit < 100
 
 # make api request with given built urls
 def api_request(url_list, url_start, country, group_id, ad_id):
@@ -88,8 +88,6 @@ def api_request(url_list, url_start, country, group_id, ad_id):
 
         # make a request with specified params
         response = requests.get(url_list[i])
-        print(response.headers)
-        print()
 
         # extracting data in json format 
         data = json.loads(response.text)
