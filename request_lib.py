@@ -66,7 +66,7 @@ def build_params(country, group_id, id_type):
 def build_url(params, access_token, ad_id):
     url_list = []
     for param in params:
-        URL = "https://graph.facebook.com/v3.3/act_" + ad_id + \
+        URL = "https://graph.facebook.com/v7.0/act_" + ad_id + \
               "/delivery_estimate?access_token=" + access_token + \
               "&optimization_goal=REACH&targeting_spec="
         URL += json.dumps(param)
