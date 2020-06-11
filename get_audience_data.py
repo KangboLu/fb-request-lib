@@ -36,7 +36,7 @@ def main():
             
             # make api request and store responses
             api_responses, end_position, reach_limit = \
-                lib.api_request(url_list, url_start, COUNTRY, GROUP_ID)
+                lib.api_request(url_list, url_start, COUNTRY, GROUP_ID, ADID)
             url_start = 0
 
             # output response to file
@@ -70,8 +70,12 @@ def main():
 # get data if all requests are not finished
 # otherwise, it will keep collect data and 
 # wait if specified limit reached
+# if your rate limit reached above 100, DON'T run the program until 1 hr later
+# it will only increase your wait time if you ran the program when the limit is > 100
 while True:
     if main() == 1:
         break
-    print("limit reached, sleep 170s...")
-    time.sleep(170)
+    print("limit reached, sleep for 3600s (good for overnight)...")
+    print("or you can shutdown the program to come back later (good for flexibility)...")
+    print("checkpoint.csv has saved the last category and country location and program will start at where you left last time")
+    time.sleep(3600)
