@@ -1,4 +1,4 @@
-# fb-request-lib
+# fb-request-lib (Updated in 2020 June)
 A friendly request library for using Facebook Graph API to study  
 reachable audience comprehensively.  
 **Both Python2 and Python3 are supported!**
@@ -22,7 +22,7 @@ transform.py               # a py file to transform your api_responses.csv outpu
 
 ## Section 0: What is this library for?
 This Facebook Marketing API request library is designed for making  
-GET API call easier to **Facebook Marketing API V3.3**.  
+GET API call easier to **Facebook Marketing API 7.0**.  
 
 **How to obtain Facebook Marketing API Credential?**  
 [See the pdf instruction in this repository!](https://github.com/KangboLu/request-lib/blob/master/FB%20Marketing%20API%20Setup.pdf)  
