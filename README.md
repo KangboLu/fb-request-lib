@@ -1,4 +1,4 @@
-# fb-request-lib (Updated in 2020 June)
+# fb-request-lib
 A friendly request library for using Facebook Graph API to study  
 reachable audience comprehensively.  
 **Both Python2 and Python3 are supported!**
